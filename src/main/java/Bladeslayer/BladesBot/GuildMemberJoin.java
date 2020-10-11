@@ -22,6 +22,6 @@ public class GuildMemberJoin extends ListenerAdapter {
         event.getGuild().getTextChannelsByName("general",true ).get(0).sendMessage(join.build()).queue();
         // Replace general with the channel name
         event.getGuild().addRoleToMember(event.getMember(), event.getGuild().getRolesByName("Member", true).get(0)).complete();
-
+        // Replace Member with the actual default role. 
     }
 }
