@@ -17,7 +17,7 @@ public class GuildMemberLeave extends ListenerAdapter {
         int num = rand.nextInt(messages.length);
         EmbedBuilder join = new EmbedBuilder();
         join.setColor(Color.MAGENTA);
-        join.setDescription(messages[num].replace("[member]" , event.getMember().getAsMention()));
+         join.setDescription(messages[num].replace("[member]" , event.getUser().getAsTag()));
         event.getGuild().getTextChannelsByName("general",true ).get(0).sendMessage(join.build()).queue();
         event.getGuild().addRoleToMember(event.getMember(), event.getGuild().getRolesByName("Member", true).get(0)).complete();
     }
