@@ -4,13 +4,15 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import static net.dv8tion.jda.api.Permission.ADMINISTRATOR;
+
 public class Mute extends ListenerAdapter {
 
 
     public void onGuildMessageReceived(GuildMessageReceivedEvent event)
     {
         String[] args = event.getMessage().getContentRaw().split("\\s+");
-
+        if(event.getMember().hasPermission(ADMINISTRATOR))
         if(args[0].equalsIgnoreCase(Bot.prefix + "mute")) {
             if (args.length > 1 && args.length < 3) {
                 Member member = event.getMessage().getMentionedMembers().get(0);
