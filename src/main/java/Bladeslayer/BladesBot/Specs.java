@@ -23,6 +23,7 @@ public class Specs extends ListenerAdapter {
             builder.addField("Fans" , "Corsair 3 ll120mm + 2 140mm stock fans and 1 120mm stock fans", false);
             builder.addField("Keyboard" , "Corsair K95 RGB Platinum", false);
             builder.addField("Mouse" , "Logitech G502 Proteus Spectrum", false);
+            builder.addField("Headset", "SennHeiser 373D", false);
             event.getChannel().sendTyping().queue();
             event.getChannel().sendMessage(builder.build()).queue();
 
