@@ -6,12 +6,14 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
 import java.util.List;
 
+import static net.dv8tion.jda.api.Permission.ADMINISTRATOR;
+
 public class Clear extends ListenerAdapter {
 
     public void onGuildMessageReceived(GuildMessageReceivedEvent event)
     {
         String[] args = event.getMessage().getContentRaw().split("\\s+");
-
+        if(event.getMember().hasPermission(ADMINISTRATOR))
         if(args[0].equalsIgnoreCase(Bot.prefix + "clear")) {
             if (args.length < 2)
             {
