@@ -23,7 +23,7 @@ public class Bot {
         jda.setActivity(Activity.playing("Destiny 2 | a!help"));
         // Replace Destiny 2 with anything game u want. 
         // jda.setActivity(Activity.watching("Watching twitch.tv/YourChannelName | a!help")); and remove jda.setActivity(Activity.playing("Destiny 2 | a!help"));
-        jda.addEventListeners(new Clear(), new GuildMemberJoin() , new Trails(), new Hi(), new UwU(), new Specs(), new GuildMemberLeave(), new Ping(), new WebScrap(), new Help());
+        jda.addEventListeners(new PFP(),new Mute(), new Clear(), new GuildMessageReactionAdd(),new GuildMessageReceived(), new GuildMemberJoin() , new Trails(), new Hi(), new UwU(), new Specs(), new GuildMemberLeave(), new Ping(), new Help());
         jda.setMemberCachePolicy(MemberCachePolicy.ALL);
         jda.build();
 
