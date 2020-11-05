@@ -7,6 +7,7 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
 
 public class Ping extends ListenerAdapter {
+    //Note for Windows users, CPU usage will return -1.0
     public void onGuildMessageReceived(GuildMessageReceivedEvent event)
     {
         String[] args = event.getMessage().getContentRaw().split("\\s+");
