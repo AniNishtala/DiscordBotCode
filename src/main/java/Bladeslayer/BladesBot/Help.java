@@ -24,7 +24,7 @@ public class Help extends ListenerAdapter {
             info.setDescription("Dev: "+event.getGuild().getMemberById("394289036224626699").getAsMention());
             info.setDescription("Language: "+"[Java](" + library + ")");
             info.addField("Hosting Platform: Blade's Custom Built PC ", "The computer it is hosted on" ,false);
-            info.setFooter("Created by Bladeslayer#6969", event.getMember().getUser().getAvatarUrl());
+            info.setFooter("Created by Bladeslayer#3954", event.getMember().getUser().getAvatarUrl());
             event.getChannel().sendTyping().queue();
             event.getChannel().sendMessage(info.build()).queue();
             info.clear();
